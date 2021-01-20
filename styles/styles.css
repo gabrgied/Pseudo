@@ -1,0 +1,90 @@
+:root {
+  --tmt: tomato; //pasibandymui
+}
+a:hover {
+  color: var(--tmt);
+}
+
+.pseudo_elementai p:first-of-type::before {
+  content: "tekstas prieš ";
+  color: var(--tmt);
+}
+
+.pseudo_elementai p:nth-child(2)::after {
+  content: " tekstas po";
+  color: var(--tmt);
+}
+
+.pseudo_elementai p:nth-child(5)::before, .pseudo_elementai p:nth-child(6)::after {
+  content: " ";
+  background: red;
+  height: 10px;
+  width: 100px;
+  display: inline-block;
+}
+
+.selection p::selection {
+  background: tomato;
+  color: white;
+}
+
+.pirma_raidė p::first-letter {
+  color: var(--tmt);
+  font-size: 26px;
+}
+
+.pirma_eilutė p::first-line {
+  background: tomato;
+  font-weight: bold;
+}
+
+.nelyginiai li:nth-child(2n-1), .lyginiai li:nth-child(2n+0) {
+  background: tomato;
+}
+
+.pasirinktas li:nth-child(3) {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+.pasirinktas li:nth-child(4) {
+  color: tomato;
+}
+
+.pasirinktas li:nth-child(5) {
+  background:tomato;
+}
+
+.pirmas_elementas li:first-of-type, .paskutinis_elementas li:last-of-type {
+  color: tomato;
+}
+
+.spalva, .dydis, .pozicija {
+  width: 200px;
+  height: 200px;
+  background: tomato;
+}
+
+.spalva {
+    transition: background 1s ease 1s;
+}
+
+.spalva:hover {
+  background: darkcyan;
+}
+
+.dydis {
+  transition: width 1s ease 0.5s;
+}
+
+.dydis:hover {
+  width: 100%;
+}
+
+.pozicija {
+  transition: margin 1s ease 0.5s;
+}
+
+.pozicija:hover {
+  margin-left: 50px;
+}
